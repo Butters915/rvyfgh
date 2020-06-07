@@ -1,0 +1,1 @@
+window_set_caption("Race To Space Dev Build " + string(global.version));
