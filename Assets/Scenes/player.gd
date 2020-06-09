@@ -14,8 +14,15 @@ func _physics_process(delta):
 	var move = -int(kLeft) + int(kRight);
 	
 	motion.x = move*500;
-	motion.y = -int(kJump)*500+gravity.y;
+	
+	if(kJump == true):
+		gravity.y -= 5000;
+	
+	motion.y = gravity.y;
 	gravity.y +=10;
+	
+	
+	
 	
 	if(sign(int(kJump)) > 0):
 		gravity.y=0;
